@@ -5,9 +5,10 @@ This tap publishes Homebrew casks and formulae for projects owned by
 
 ## README stays in sync automatically
 
-The version tables in [`README.md`](../README.md) are **generated**, not edited
-by hand. The `.rb` files under `Casks/` and `Formula/` are the single source of
-truth for each artifact's name, version, description and homepage.
+The install commands and version tables in [`README.md`](../README.md) are
+**generated**, not edited by hand. The `.rb` files under `Casks/` and `Formula/`
+are the single source of truth for each artifact's name, version, description
+and homepage.
 
 On every push that touches `Casks/**` or `Formula/**` — including the direct
 pushes the upstream repos make over their deploy keys — the
@@ -23,8 +24,9 @@ python3 scripts/sync-readme.py          # rewrite the tables in place
 python3 scripts/sync-readme.py --check  # CI-style check: fail if out of date
 ```
 
-Only the regions between the `<!-- BEGIN:casks -->` / `<!-- BEGIN:formulae -->`
-markers are managed by the script; the surrounding prose is hand-written.
+Only the regions between the `<!-- BEGIN:* -->` / `<!-- END:* -->` markers are
+managed by the script (`install-tap`, `install-notap`, `casks`, `formulae`); the
+surrounding prose is hand-written.
 
 ## Vitrine
 
