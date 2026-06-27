@@ -1,0 +1,47 @@
+name: Sync README tables
+
+# Whenever a Cask or Formula changes — including the direct pushes the upstream
+# repos (vitrine, gancho, gos, …) make over their deploy keys — regenerate the
+# README version tables from the .rb sources and commit the result back.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Casks/**"
+      - "Formula/**"
+      - "scripts/sync-readme.py"
+      - ".github/workflows/sync-readme.yml"
+  workflow_dispatch: {}
+
+# Serialize runs so two near-simultaneous upstream bumps can't race on the push.
+concurrency:
+  group: sync-readme
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Regenerate README tables
+        run: python3 scripts/sync-readme.py
+
+      - name: Commit changes if README drifted
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "README already in sync — nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "docs: sync README tap tables [skip ci]"
+          git push

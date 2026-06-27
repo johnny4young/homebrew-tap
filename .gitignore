@@ -1,0 +1,2 @@
+# LLVM/coverage artifacts that can land here from local `brew`/test runs
+*.profraw
