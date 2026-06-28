@@ -41,7 +41,7 @@ on your PATH.
 | Cask | Version | Description | Upstream |
 | --- | --- | --- | --- |
 | `gancho` | `0.1.0` | Privacy-first smart clipboard manager | <https://github.com/johnny4young/gancho> |
-| `vitrine` | `0.17.0` | Menu-bar app that turns code into beautiful images | <https://github.com/johnny4young/vitrine> |
+| `vitrine` | `0.18.0` | Menu-bar app that turns code into beautiful images | <https://github.com/johnny4young/vitrine> |
 <!-- END:casks -->
 
 ## Available formulae
