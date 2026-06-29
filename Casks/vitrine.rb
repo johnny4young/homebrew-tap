@@ -1,11 +1,11 @@
 cask "vitrine" do
-  version "0.19.0"
-  sha256 "0c6f2d4d3841a7a06ee24b4e46ff7bc676a84613304cd16a94dad902861153df"
+  version "0.20.0"
+  sha256 "0ce2fc14e8d8a64e2ec6343952b1fa8df265e916fd348c96788e725d79ce2f03"
 
   url "https://github.com/johnny4young/vitrine/releases/download/v#{version}/Vitrine-#{version}.dmg"
   name "Vitrine"
   desc "Menu-bar app that turns code into beautiful images"
-  homepage "https://github.com/johnny4young/vitrine"
+  homepage "https://vitrineframe.app"
 
   # A stable release-URL pattern exists (GitHub release tags), so livecheck can
   # track new versions straight from the releases page (CS-063).
