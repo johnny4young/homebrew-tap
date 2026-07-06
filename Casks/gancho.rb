@@ -1,6 +1,6 @@
 cask "gancho" do
-  version "0.3.2"
-  sha256 "3854948e323858aec66fcbccde666b03809a66177d8faba633f35452244f985b"
+  version "0.4.0"
+  sha256 "88c5e1f59191d759176e3092613c25fd708a8cb0cf077ef201c97cee44a78f7a"
 
   url "https://github.com/johnny4young/gancho/releases/download/v#{version}/Gancho-#{version}.dmg"
   name "Gancho"
