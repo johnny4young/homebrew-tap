@@ -1,3 +1,6 @@
+# Homebrew cask TEMPLATE for Portavoz (D10). The rendered cask lives in
+# the centralized tap johnny4young/homebrew-tap; the update-cask.yml
+# workflow (or scripts/make-release.sh locally) fills version and sha256.
 cask "portavoz" do
   version "0.1.0"
   sha256 "b27781ea681691a312e12f4a9d53c166ac7f3c53042d9845aa615f6f37ed9213"
@@ -5,6 +8,7 @@ cask "portavoz" do
   url "https://github.com/johnny4young/portavoz/releases/download/v#{version}/Portavoz-#{version}.dmg"
   name "Portavoz"
   desc "Privacy-first meeting assistant — knows who said what, locally"
+  # portavoz.app is parked until the site ships; the repo is the homepage.
   homepage "https://github.com/johnny4young/portavoz"
 
   # Stable GitHub release-tag URLs, so livecheck tracks new versions from the
