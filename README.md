@@ -12,6 +12,7 @@ brew tap johnny4young/tap
 
 # Casks (macOS apps)
 brew install --cask gancho
+brew install --cask portavoz
 brew install --cask vitrine
 
 # Formulae (CLIs, macOS + Linux)
@@ -25,6 +26,7 @@ Or install directly, without tapping first:
 ```bash
 # Casks (macOS apps)
 brew install --cask johnny4young/tap/gancho
+brew install --cask johnny4young/tap/portavoz
 brew install --cask johnny4young/tap/vitrine
 
 # Formulae (CLIs, macOS + Linux)
@@ -41,6 +43,7 @@ on your PATH.
 | Cask | Version | Description | Upstream |
 | --- | --- | --- | --- |
 | `gancho` | `0.5.0` | Privacy-first smart clipboard manager | <https://github.com/johnny4young/gancho> |
+| `portavoz` | `0.1.0` | Privacy-first meeting assistant — knows who said what, locally | <https://github.com/johnny4young/portavoz> |
 | `vitrine` | `0.20.0` | Menu-bar app that turns code into beautiful images | <https://vitrineframe.app> |
 <!-- END:casks -->
 
