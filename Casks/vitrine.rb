@@ -1,6 +1,6 @@
 cask "vitrine" do
-  version "0.25.2"
-  sha256 "5436143b0b71d1353aedd3c72d9bdf11a72bedcf710dbab0944d1dad80cd6420"
+  version "0.25.3"
+  sha256 "9dc883999e797472bb6911f9a1f28093b423e56058c2e5e5a08dd95f37547e71"
 
   url "https://github.com/johnny4young/vitrine/releases/download/v#{version}/Vitrine-#{version}.dmg"
   name "Vitrine"
