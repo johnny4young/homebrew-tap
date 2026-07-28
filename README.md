@@ -43,7 +43,7 @@ on your PATH.
 | Cask | Version | Description | Upstream |
 | --- | --- | --- | --- |
 | `gancho` | `0.8.2` | Privacy-first smart clipboard manager | <https://github.com/johnny4young/gancho> |
-| `portavoz` | `0.6.0` | Privacy-first meeting assistant — knows who said what, locally | <https://portavoz.app> |
+| `portavoz` | `0.7.0` | Privacy-first meeting assistant — knows who said what, locally | <https://portavoz.app> |
 | `vitrine` | `0.25.4` | Menu-bar app that turns code into beautiful images | <https://vitrineframe.app/> |
 <!-- END:casks -->
 
