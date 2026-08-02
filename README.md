@@ -12,6 +12,7 @@ brew tap johnny4young/tap
 
 # Casks (macOS apps)
 brew install --cask gancho
+brew install --cask lingua
 brew install --cask portavoz
 brew install --cask vitrine
 
@@ -26,6 +27,7 @@ Or install directly, without tapping first:
 ```bash
 # Casks (macOS apps)
 brew install --cask johnny4young/tap/gancho
+brew install --cask johnny4young/tap/lingua
 brew install --cask johnny4young/tap/portavoz
 brew install --cask johnny4young/tap/vitrine
 
@@ -35,7 +37,8 @@ brew install johnny4young/tap/gos
 <!-- END:install-notap -->
 
 The `gancho` cask also puts the bundled `gancho` CLI (and its local MCP server)
-on your PATH.
+on your PATH. Lingua's headless CLI will use a separate npm package starting
+with its next stable release, so this cask remains a native-app installation.
 
 ## Available casks
 
@@ -43,6 +46,7 @@ on your PATH.
 | Cask | Version | Description | Upstream |
 | --- | --- | --- | --- |
 | `gancho` | `0.8.2` | Privacy-first smart clipboard manager | <https://github.com/johnny4young/gancho> |
+| `lingua` | `0.15.0` | Multi-language code runner for your desktop | <https://linguacode.dev/> |
 | `portavoz` | `0.7.0` | Privacy-first meeting assistant — knows who said what, locally | <https://portavoz.app> |
 | `vitrine` | `0.25.5` | Menu-bar app that turns code into beautiful images | <https://vitrineframe.app/> |
 <!-- END:casks -->
@@ -61,17 +65,20 @@ deprecated and re-points existing users here automatically via its
 
 ## Requirements
 
-- Casks: macOS Sonoma 14 or newer (`vitrine`); macOS Tahoe 26 or newer (`gancho`); Homebrew with Cask support.
+- Casks: macOS Monterey 12 or newer (`lingua`), Sonoma 14 or newer
+  (`portavoz`, `vitrine`), or Tahoe 26 or newer (`gancho`); Homebrew with Cask
+  support.
 - Formulae: `gos` runs on macOS and Linux.
 
 ## Updating
 
 ```bash
 brew update
-brew upgrade --cask vitrine
+brew upgrade --cask lingua
 ```
 
-Vitrine also includes Sparkle auto-updates for direct-download installs, so the cask is marked `auto_updates true`. Homebrew can still install or upgrade the published DMG explicitly.
+Apps marked `auto_updates true` may update themselves when installed directly.
+Homebrew can still install or upgrade their published DMGs explicitly.
 
 ## Verifying the published artifact
 

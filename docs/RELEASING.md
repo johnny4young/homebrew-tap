@@ -28,6 +28,51 @@ Only the regions between the `<!-- BEGIN:* -->` / `<!-- END:* -->` markers are
 managed by the script (`install-tap`, `install-notap`, `casks`, `formulae`); the
 surrounding prose is hand-written.
 
+## Lingua
+
+Lingua releases are produced by the upstream repository:
+
+- Repository: <https://github.com/johnny4young/lingua>
+- Current release: <https://github.com/johnny4young/lingua/releases/tag/v0.15.0>
+- Current cask: [`Casks/lingua.rb`](../Casks/lingua.rb)
+
+The upstream release publishes separate Apple Silicon and Intel DMGs plus a
+`SHA256SUMS.txt` manifest. Lingua's
+`scripts/generate-distribution-manifests.mjs` renders the cask directly from
+that checksum manifest, so the two architecture digests are never copied by
+hand. Promote the generated `packaging/homebrew/Casks/lingua.rb` file here
+without rewriting it.
+
+Validate a candidate through a throwaway local Git tap so Homebrew resolves the
+architecture interpolation exactly as users will. Run this from a normal macOS
+session with Disk Arbitration available; containers that cannot mount DMGs can
+only complete the syntax, style, checksum, and livecheck subset:
+
+```bash
+brew tap-new lingua-validate/tap
+mkdir -p "$(brew --repository lingua-validate/tap)/Casks"
+cp Casks/lingua.rb "$(brew --repository lingua-validate/tap)/Casks/"
+git -C "$(brew --repository lingua-validate/tap)" add Casks/lingua.rb
+git -C "$(brew --repository lingua-validate/tap)" commit -m 'test: stage Lingua cask'
+brew trust --tap lingua-validate/tap
+brew style --cask lingua-validate/tap/lingua
+brew audit --cask --online lingua-validate/tap/lingua
+brew livecheck --cask lingua-validate/tap/lingua
+APPDIR="$(mktemp -d)"
+brew install --cask lingua-validate/tap/lingua --appdir="$APPDIR"
+/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$APPDIR/Lingua.app/Contents/Info.plist"
+codesign --verify --deep --strict "$APPDIR/Lingua.app"
+spctl --assess --type execute --verbose=2 "$APPDIR/Lingua.app"
+brew uninstall --cask --force lingua-validate/tap/lingua
+brew untrust --tap lingua-validate/tap
+brew untap lingua-validate/tap
+rmdir "$APPDIR"
+```
+
+The version must match the cask and Gatekeeper must report `accepted` with a
+`Notarized Developer ID` source. Publishing the tap commit remains a separate
+reviewed push.
+
 ## Vitrine
 
 Vitrine releases are produced by the upstream repository:
