@@ -33,7 +33,7 @@ surrounding prose is hand-written.
 Lingua releases are produced by the upstream repository:
 
 - Repository: <https://github.com/johnny4young/lingua>
-- Current release: <https://github.com/johnny4young/lingua/releases/tag/v0.15.0>
+- Current release: <https://github.com/johnny4young/lingua/releases/tag/v1.0.0>
 - Current cask: [`Casks/lingua.rb`](../Casks/lingua.rb)
 
 The upstream release publishes separate Apple Silicon and Intel DMGs plus a
@@ -60,9 +60,9 @@ brew audit --cask --online lingua-validate/tap/lingua
 brew livecheck --cask lingua-validate/tap/lingua
 APPDIR="$(mktemp -d)"
 brew install --cask lingua-validate/tap/lingua --appdir="$APPDIR"
-/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$APPDIR/Lingua.app/Contents/Info.plist"
-codesign --verify --deep --strict "$APPDIR/Lingua.app"
-spctl --assess --type execute --verbose=2 "$APPDIR/Lingua.app"
+/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$APPDIR/lingua.app/Contents/Info.plist"
+codesign --verify --deep --strict "$APPDIR/lingua.app"
+spctl --assess --type execute --verbose=2 "$APPDIR/lingua.app"
 brew uninstall --cask --force lingua-validate/tap/lingua
 brew untrust --tap lingua-validate/tap
 brew untap lingua-validate/tap
