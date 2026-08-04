@@ -46,7 +46,7 @@ with its next stable release, so this cask remains a native-app installation.
 | Cask | Version | Description | Upstream |
 | --- | --- | --- | --- |
 | `gancho` | `0.8.2` | Privacy-first smart clipboard manager | <https://github.com/johnny4young/gancho> |
-| `lingua` | `0.15.0` | Multi-language code runner for your desktop | <https://linguacode.dev/> |
+| `lingua` | `1.0.0` | Multi-language code runner for your desktop | <https://linguacode.dev/> |
 | `portavoz` | `0.7.0` | Privacy-first meeting assistant — knows who said what, locally | <https://portavoz.app> |
 | `vitrine` | `1.0.0` | Menu-bar app that turns code into beautiful images | <https://vitrineframe.app/> |
 <!-- END:casks -->
