@@ -38,8 +38,9 @@ brew install johnny4young/tap/gos
 
 The `gancho` cask also puts the bundled `gancho` CLI (and its local MCP server)
 on your PATH. The `lingua` cask installs the desktop app only: Lingua's headless
-CLI is distributed separately and is not part of this cask — see the
-[Lingua repository](https://github.com/johnny4young/lingua) for how to get it.
+CLI ships on npm as
+[`@linguacode/cli`](https://www.npmjs.com/package/@linguacode/cli)
+(`npm install -g @linguacode/cli`), not in this cask.
 
 ## Available casks
 
