@@ -78,7 +78,7 @@ reviewed push.
 Vitrine releases are produced by the upstream repository:
 
 - Repository: <https://github.com/johnny4young/vitrine>
-- Current release: <https://github.com/johnny4young/vitrine/releases/tag/v0.1.0>
+- Current release: <https://github.com/johnny4young/vitrine/releases/latest>
 - Current cask: [`Casks/vitrine.rb`](../Casks/vitrine.rb)
 
 The upstream release workflow publishes four assets:
@@ -88,11 +88,11 @@ The upstream release workflow publishes four assets:
 - `appcast.xml`
 - `vitrine-cask-update.txt`
 
-`vitrine-cask-update.txt` is the source of truth for the Homebrew bump. For v0.1.0 it contains:
+`vitrine-cask-update.txt` is the source of truth for each Homebrew bump. It contains:
 
 ```ruby
-version "0.1.0"
-sha256 "8524b7c5071b87bc2666b0ac046d26a59e9f1f8eb1ecebe97bfbd039258a51b8"
+version "<version>"
+sha256 "<sha256-of-the-published-dmg>"
 ```
 
 ## Gancho
@@ -182,14 +182,16 @@ These steps use Vitrine as the example; substitute the app name, cask file, and
 6. Commit with an imperative Conventional Commit subject, for example:
 
    ```bash
-   git commit -m "feat(vitrine): publish cask v0.1.0"
+   git commit -m "chore(vitrine): publish cask v<version>"
    ```
 
 ## Current Vitrine metadata
 
+[`Casks/vitrine.rb`](../Casks/vitrine.rb) is the source of truth for the current version
+and SHA-256; the auto-generated table in [`README.md`](../README.md) mirrors its version.
+Do not duplicate either changing value in this guide.
+
 | Field | Value |
 | --- | --- |
-| Version | `0.1.0` |
-| SHA-256 | `8524b7c5071b87bc2666b0ac046d26a59e9f1f8eb1ecebe97bfbd039258a51b8` |
 | Minimum macOS | Sonoma 14 (`:sonoma`) |
 | Auto-updates | `true` (Sparkle direct-download channel) |
