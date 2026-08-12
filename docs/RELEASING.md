@@ -33,15 +33,27 @@ surrounding prose is hand-written.
 Lingua releases are produced by the upstream repository:
 
 - Repository: <https://github.com/johnny4young/lingua>
-- Current release: <https://github.com/johnny4young/lingua/releases/tag/v1.0.0>
+- Current release: <https://github.com/johnny4young/lingua/releases/tag/v1.2.0>
 - Current cask: [`Casks/lingua.rb`](../Casks/lingua.rb)
+- Current CLI formula: [`Formula/lingua-cli.rb`](../Formula/lingua-cli.rb)
 
 The upstream release publishes separate Apple Silicon and Intel DMGs plus a
 `SHA256SUMS.txt` manifest. Lingua's
-`scripts/generate-distribution-manifests.mjs` renders the cask directly from
-that checksum manifest, so the two architecture digests are never copied by
-hand. Promote the generated `packaging/homebrew/Casks/lingua.rb` file here
-without rewriting it.
+`scripts/generate-distribution-manifests.mjs` renders the cask and CLI formula
+directly from that checksum manifest, so none of their digests are copied by
+hand. Promote the generated `packaging/homebrew/Casks/lingua.rb` and
+`packaging/homebrew/Formula/lingua-cli.rb` files here without rewriting them.
+
+The cask and formula are intentionally separate: `lingua` installs the same
+Desktop app as the release DMG, while `lingua-cli` installs the terminal-only
+artifact plus Homebrew's `node@24`. Validate the formula with:
+
+```bash
+brew style johnny4young/tap/lingua-cli
+brew audit --strict --online johnny4young/tap/lingua-cli
+brew install johnny4young/tap/lingua-cli
+brew test johnny4young/tap/lingua-cli
+```
 
 Validate a candidate through a throwaway local Git tap so Homebrew resolves the
 architecture interpolation exactly as users will. Run this from a normal macOS

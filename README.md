@@ -18,6 +18,7 @@ brew install --cask vitrine
 
 # Formulae (CLIs, macOS + Linux)
 brew install gos
+brew install lingua-cli
 ```
 <!-- END:install-tap -->
 
@@ -33,14 +34,15 @@ brew install --cask johnny4young/tap/vitrine
 
 # Formulae (CLIs, macOS + Linux)
 brew install johnny4young/tap/gos
+brew install johnny4young/tap/lingua-cli
 ```
 <!-- END:install-notap -->
 
 The `gancho` cask also puts the bundled `gancho` CLI (and its local MCP server)
-on your PATH. The `lingua` cask installs the desktop app only: Lingua's headless
-CLI ships on npm as
-[`@linguacode/cli`](https://www.npmjs.com/package/@linguacode/cli)
-(`npm install -g @linguacode/cli`), not in this cask.
+on your PATH. Lingua keeps its two surfaces explicit: the `lingua` cask installs
+the desktop app, while the `lingua-cli` formula installs only the headless
+terminal command and its Node 24 runtime. The CLI also remains available as
+[`@linguacode/cli`](https://www.npmjs.com/package/@linguacode/cli).
 
 ## Available casks
 
@@ -48,7 +50,7 @@ CLI ships on npm as
 | Cask | Version | Description | Upstream |
 | --- | --- | --- | --- |
 | `gancho` | `0.8.2` | Privacy-first smart clipboard manager | <https://github.com/johnny4young/gancho> |
-| `lingua` | `1.1.0` | Multi-language code runner for your desktop | <https://linguacode.dev/> |
+| `lingua` | `1.2.0` | Multi-language code runner for your desktop | <https://linguacode.dev/> |
 | `portavoz` | `0.7.0` | Privacy-first meeting assistant — knows who said what, locally | <https://portavoz.app> |
 | `vitrine` | `1.0.1` | Menu-bar app that turns code into beautiful images | <https://vitrineframe.app/> |
 <!-- END:casks -->
@@ -59,6 +61,7 @@ CLI ships on npm as
 | Formula | Version | Description | Upstream |
 | --- | --- | --- | --- |
 | `gos` | `1.9.0` | Go Switch - install and switch Go versions in seconds | <https://github.com/johnny4young/gos> |
+| `lingua-cli` | `1.2.0` | Headless offline CLI for Lingua utilities, runners, and Run Capsules | <https://linguacode.dev/cli> |
 <!-- END:formulae -->
 
 `gos` previously lived in the standalone `johnny4young/gos` tap. That tap is
@@ -70,13 +73,14 @@ deprecated and re-points existing users here automatically via its
 - Casks: macOS Monterey 12 or newer (`lingua`), Sonoma 14 or newer
   (`portavoz`, `vitrine`), or Tahoe 26 or newer (`gancho`); Homebrew with Cask
   support.
-- Formulae: `gos` runs on macOS and Linux.
+- Formulae: `gos` and `lingua-cli` run on macOS and Linux.
 
 ## Updating
 
 ```bash
 brew update
 brew upgrade --cask lingua
+brew upgrade lingua-cli
 ```
 
 Apps marked `auto_updates true` may update themselves when installed directly.
