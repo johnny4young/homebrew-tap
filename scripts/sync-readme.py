@@ -59,11 +59,20 @@ def _field(text: str, name: str) -> str | None:
     return match.group(1) if match else None
 
 
+def _version_from_url(text: str) -> str | None:
+    """Infer versions Homebrew scans from URLs when explicit version is redundant."""
+    url = _field(text, "url")
+    if not url:
+        return None
+    match = re.search(r"(?:/v|[-_])(\d+\.\d+\.\d+)(?=[./_-]|$)", url)
+    return match.group(1) if match else None
+
+
 def parse_artifact(path: Path) -> dict[str, str]:
     """Extract the README-facing metadata from a single .rb file."""
     text = path.read_text(encoding="utf-8")
     name = path.stem  # filename stem == the cask/formula token
-    version = _field(text, "version")
+    version = _field(text, "version") or _version_from_url(text)
     desc = _field(text, "desc")
     homepage = _field(text, "homepage")
 
