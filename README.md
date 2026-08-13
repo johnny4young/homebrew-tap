@@ -41,7 +41,8 @@ brew install johnny4young/tap/lingua-cli
 The `gancho` cask also puts the bundled `gancho` CLI (and its local MCP server)
 on your PATH. Lingua keeps its two surfaces explicit: the `lingua` cask installs
 the desktop app, while the `lingua-cli` formula installs only the headless
-terminal command and its Node 24 runtime. The CLI also remains available as
+terminal command, its Node 24 runtime, and Bash, Zsh, and Fish completions. The
+CLI also remains available as
 [`@linguacode/cli`](https://www.npmjs.com/package/@linguacode/cli).
 
 ## Available casks
