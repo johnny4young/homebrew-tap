@@ -1,10 +1,10 @@
 cask "vitrine" do
-  version "1.0.1"
-  sha256 "e7b3900517f280fe11ac6fcc32628bae1f64cd107de0ff2b5eebdc3f5e6fa9d9"
+  version "1.2.1"
+  sha256 "3cd713391b87f3408390a5ec5da3021a7b0cc528c5922093d4fcaea87600ee9f"
 
   url "https://github.com/johnny4young/vitrine/releases/download/v#{version}/Vitrine-#{version}.dmg"
   name "Vitrine"
-  desc "Menu-bar app that turns code into beautiful images"
+  desc "Menu-bar app for polished terminal and code captures"
   homepage "https://vitrineframe.app/"
 
   # A stable release-URL pattern exists (GitHub release tags), so livecheck can
@@ -17,7 +17,7 @@ cask "vitrine" do
   # Sparkle keeps the installed app current in place, so Homebrew
   # should not flag user-updated copies as outdated.
   auto_updates true
-  depends_on macos: :sonoma
+  depends_on macos: :sequoia
 
   app "Vitrine.app"
   # The `vitrine` command-line renderer ships embedded in the app bundle;
