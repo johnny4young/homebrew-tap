@@ -53,7 +53,7 @@ CLI also remains available as
 | `gancho` | `0.8.2` | Privacy-first smart clipboard manager | <https://github.com/johnny4young/gancho> |
 | `lingua` | `1.3.0` | Multi-language code runner for your desktop | <https://linguacode.dev/> |
 | `portavoz` | `0.7.0` | Privacy-first meeting assistant — knows who said what, locally | <https://portavoz.app> |
-| `vitrine` | `1.0.1` | Menu-bar app that turns code into beautiful images | <https://vitrineframe.app/> |
+| `vitrine` | `1.2.1` | Menu-bar app for polished terminal and code captures | <https://vitrineframe.app/> |
 <!-- END:casks -->
 
 ## Available formulae
