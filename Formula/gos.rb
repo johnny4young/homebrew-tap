@@ -1,9 +1,9 @@
 class Gos < Formula
   desc "Go Switch - install and switch Go versions in seconds"
   homepage "https://github.com/johnny4young/gos"
-  url "https://github.com/johnny4young/gos/archive/refs/tags/v1.10.0.tar.gz"
-  version "1.10.0"
-  sha256 "ccf7d14ea94bc5cb8c4b25e93a98456cf08fb7be1e138fb2fb399095e8878445"
+  url "https://github.com/johnny4young/gos/archive/refs/tags/v1.11.0.tar.gz"
+  version "1.11.0"
+  sha256 "850dd87c47e22819c1fb4fcd9cfc43d85e56786dde35aac000cc77cccd8c6479"
   license "MIT"
 
   def install
