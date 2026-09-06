@@ -51,7 +51,7 @@ CLI also remains available as
 | Cask | Version | Description | Upstream |
 | --- | --- | --- | --- |
 | `gancho` | `0.8.2` | Privacy-first smart clipboard manager | <https://github.com/johnny4young/gancho> |
-| `lingua` | `1.3.0` | Multi-language code runner for your desktop | <https://linguacode.dev/> |
+| `lingua` | `1.4.1` | Multi-language code runner for your desktop | <https://linguacode.dev/> |
 | `portavoz` | `0.7.0` | Privacy-first meeting assistant — knows who said what, locally | <https://portavoz.app> |
 | `vitrine` | `1.2.1` | Menu-bar app for polished terminal and code captures | <https://vitrineframe.app/> |
 <!-- END:casks -->
@@ -62,7 +62,7 @@ CLI also remains available as
 | Formula | Version | Description | Upstream |
 | --- | --- | --- | --- |
 | `gos` | `1.10.0` | Go Switch - install and switch Go versions in seconds | <https://github.com/johnny4young/gos> |
-| `lingua-cli` | `1.3.0` | Headless offline CLI for Lingua utilities, runners, and Run Capsules | <https://linguacode.dev/cli> |
+| `lingua-cli` | `1.4.1` | Headless offline CLI for Lingua utilities, runners, and Run Capsules | <https://linguacode.dev/cli> |
 <!-- END:formulae -->
 
 `gos` previously lived in the standalone `johnny4young/gos` tap. That tap is
