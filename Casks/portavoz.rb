@@ -2,8 +2,8 @@
 # the centralized tap johnny4young/homebrew-tap; the update-cask.yml
 # workflow (or scripts/make-release.sh locally) fills version and sha256.
 cask "portavoz" do
-  version "0.7.0"
-  sha256 "471effae5ca69a068e9217758019e6d01d7f2e989ab91a90040c18c020da2201"
+  version "1.0.0"
+  sha256 "bcef01fa835a681226ffdca6842e2d42a43303a48fc567c31b39c4f519a5b862"
 
   # The download URL lives on GitHub while the homepage is the product
   # site, so the cask declares the verified source domain (audit rule).
