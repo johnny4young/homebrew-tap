@@ -33,7 +33,7 @@ surrounding prose is hand-written.
 Lingua releases are produced by the upstream repository:
 
 - Repository: <https://github.com/johnny4young/lingua>
-- Current release: <https://github.com/johnny4young/lingua/releases/tag/v1.2.0>
+- Current release: <https://github.com/johnny4young/lingua/releases/latest>
 - Current cask: [`Casks/lingua.rb`](../Casks/lingua.rb)
 - Current CLI formula: [`Formula/lingua-cli.rb`](../Formula/lingua-cli.rb)
 
