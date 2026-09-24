@@ -33,7 +33,7 @@ surrounding prose is hand-written.
 Lingua releases are produced by the upstream repository:
 
 - Repository: <https://github.com/johnny4young/lingua>
-- Current release: <https://github.com/johnny4young/lingua/releases/tag/v1.2.0>
+- Current release: <https://github.com/johnny4young/lingua/releases/latest>
 - Current cask: [`Casks/lingua.rb`](../Casks/lingua.rb)
 - Current CLI formula: [`Formula/lingua-cli.rb`](../Formula/lingua-cli.rb)
 
@@ -82,8 +82,13 @@ rmdir "$APPDIR"
 ```
 
 The version must match the cask and Gatekeeper must report `accepted` with a
-`Notarized Developer ID` source. Publishing the tap commit remains a separate
-reviewed push.
+`Notarized Developer ID` source.
+
+Publishing a stable Lingua release runs its `Update Homebrew tap` workflow,
+which renders both files from the published `SHA256SUMS.txt` and pushes them
+here over the `lingua release tap updater` deploy key. It refuses drafts, skips
+prereleases, and never downgrades. If the key is missing the run only warns;
+dispatch it again with the tag, or promote the generated files by hand.
 
 ## Vitrine
 
