@@ -2,8 +2,8 @@
 # the centralized tap johnny4young/homebrew-tap; the update-cask.yml
 # workflow (or scripts/make-release.sh locally) fills version and sha256.
 cask "portavoz" do
-  version "1.2.0"
-  sha256 "128245601dbe25af9de69104bd55b06b4af1ee97a28523f9a029b52065977f37"
+  version "1.3.0"
+  sha256 "7f01a5258d80748874a09bd1038d3e033145c912bb89821bff7b665965f6da07"
 
   # The download URL lives on GitHub while the homepage is the product
   # site, so the cask declares the verified source domain (audit rule).
@@ -23,9 +23,11 @@ cask "portavoz" do
   # Portavoz keeps itself current in place via Sparkle (direct-download
   # channel), so Homebrew should not flag user-updated copies as outdated.
   auto_updates true
-  depends_on macos: :sonoma
+  depends_on macos: :tahoe
 
   app "Portavoz.app"
+  # The command-line tool and MCP server ship inside the app (D582).
+  binary "#{appdir}/Portavoz.app/Contents/Helpers/portavoz-cli"
 
   zap trash: [
     "~/Library/Application Support/Portavoz",
