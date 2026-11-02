@@ -1,6 +1,3 @@
-# Homebrew cask TEMPLATE for Portavoz (D10). The rendered cask lives in
-# the centralized tap johnny4young/homebrew-tap; the update-cask.yml
-# workflow (or scripts/make-release.sh locally) fills version and sha256.
 cask "portavoz" do
   version "1.3.0"
   sha256 "7f01a5258d80748874a09bd1038d3e033145c912bb89821bff7b665965f6da07"
