@@ -5,10 +5,7 @@ cask "portavoz" do
   version "1.3.0"
   sha256 "7f01a5258d80748874a09bd1038d3e033145c912bb89821bff7b665965f6da07"
 
-  # The download URL lives on GitHub while the homepage is the product
-  # site, so the cask declares the verified source domain (audit rule).
-  url "https://github.com/johnny4young/portavoz/releases/download/v#{version}/Portavoz-#{version}.dmg",
-      verified: "github.com/johnny4young/portavoz/"
+  url "https://github.com/johnny4young/portavoz/releases/download/v#{version}/Portavoz-#{version}.dmg"
   name "Portavoz"
   desc "Privacy-first meeting assistant — knows who said what, locally"
   homepage "https://portavoz.app"
