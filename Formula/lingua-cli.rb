@@ -1,17 +1,17 @@
 class LinguaCli < Formula
   desc "Headless offline CLI for Lingua utilities, runners, and Run Capsules"
   homepage "https://linguacode.dev/cli"
-  url "https://github.com/johnny4young/lingua/releases/download/v2.0.0/linguacode-cli-2.0.0.tgz"
-  sha256 "6eeb5ae128b3f33fc5f6ba14d6f5ff184234e5b2cade7c0fdd3a1c2d156eed35"
+  url "https://github.com/johnny4young/lingua/releases/download/v2.1.0/linguacode-cli-2.1.0.tgz"
+  sha256 "40b03bc621e0fa7a0d158a499d835a1a988be06140e957d65343f8b81a3fff92"
   license :cannot_represent
 
-  depends_on "node@24"
+  depends_on "node@26"
 
   def install
     package_root = (buildpath/"package").directory? ? buildpath/"package" : buildpath
     libexec.install package_root/"LICENSE", package_root/"README.md", package_root/"package.json"
     (libexec/"bin").install package_root/"bin/lingua.cjs"
-    (bin/"lingua").write_env_script libexec/"bin/lingua.cjs", PATH: "#{formula_opt_bin("node@24")}:$PATH"
+    (bin/"lingua").write_env_script libexec/"bin/lingua.cjs", PATH: "#{formula_opt_bin("node@26")}:$PATH"
     generate_completions_from_executable(bin/"lingua", "completion")
   end
 
