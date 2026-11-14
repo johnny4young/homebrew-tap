@@ -55,7 +55,7 @@ CLI also remains available as
 | `gancho` | `0.11.1` | Privacy-first smart clipboard manager | <https://github.com/johnny4young/gancho> |
 | `lingua` | `2.3.0` | Multi-language code runner for your desktop | <https://linguacode.dev/> |
 | `portavoz` | `1.5.1` | Privacy-first meeting assistant — knows who said what, locally | <https://portavoz.app> |
-| `secreteo` | `0.1.0` | Local, private dictation from the menu bar | <https://github.com/johnny4young/secreteo> |
+| `secreteo` | `0.1.1` | Local, private dictation from the menu bar | <https://github.com/johnny4young/secreteo> |
 | `vitrine` | `1.3.0` | Menu-bar app for polished terminal and code captures | <https://vitrineframe.app/> |
 <!-- END:casks -->
 
