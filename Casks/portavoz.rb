@@ -1,6 +1,6 @@
 cask "portavoz" do
-  version "1.5.1"
-  sha256 "9a76556b3fddac9948209a6f8f6e685e218a126d017a31833e539e252d05bdb3"
+  version "2.0.0"
+  sha256 "c6d4ddec0d1ede2a70b428c0b424fdb4119823dd4247614cb9880020eb353d66"
 
   url "https://github.com/johnny4young/portavoz/releases/download/v#{version}/Portavoz-#{version}.dmg"
   name "Portavoz"
