@@ -1,6 +1,6 @@
 cask "secreteo" do
-  version "1.0.0"
-  sha256 "9dd098ced8275ba2f649f4a9c1c31084f2ee3bf61f78fe3df2ece74cc18191d3"
+  version "1.1.0"
+  sha256 "0f12c2aa9313eaedf3c3eb93c13dce00337876f0f514a6af93d37820feb04856"
 
   url "https://github.com/johnny4young/secreteo/releases/download/v#{version}/Secreteo-#{version}.dmg"
   name "Secreteo"
