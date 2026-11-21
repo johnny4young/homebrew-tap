@@ -1,6 +1,6 @@
 cask "vitrine" do
-  version "1.3.0"
-  sha256 "b4c35b4fa80552800bd1a6aa09b5d9b5f3dc0146f0727386a301fe468dcbc350"
+  version "2.0.0"
+  sha256 "95262beb1d794a007894352832b4876779b344b4cf5bd7c4bab8544efdada4da"
 
   url "https://github.com/johnny4young/vitrine/releases/download/v#{version}/Vitrine-#{version}.dmg"
   name "Vitrine"
@@ -17,7 +17,8 @@ cask "vitrine" do
   # Sparkle keeps the installed app current in place, so Homebrew
   # should not flag user-updated copies as outdated.
   auto_updates true
-  depends_on macos: :sequoia
+  depends_on arch: :arm64
+  depends_on macos: :tahoe
 
   app "Vitrine.app"
   # The `vitrine` command-line renderer ships embedded in the app bundle;
